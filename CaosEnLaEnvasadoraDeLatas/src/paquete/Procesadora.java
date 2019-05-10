@@ -20,7 +20,6 @@ public class Procesadora {
 	}
 	
 	private void llenarVectorYBorrarLista() {
-		//this.latasVec = latas.toArray(a)
 		this.latasVec = new Lata[this.latas.size()];
 		this.latasVec = this.latas.toArray(new Lata[this.latas.size()]);
 		this.latas.clear();
