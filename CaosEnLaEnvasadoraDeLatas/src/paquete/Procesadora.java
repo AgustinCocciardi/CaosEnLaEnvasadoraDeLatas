@@ -26,10 +26,10 @@ public class Procesadora {
 	}
 	
 	private void obtenerSecuencias() {
-		int inicio = 0, fin, numSecuencias=0;
+		int inicio = 0, fin, numSecuencias=0, i;
 		boolean esGarbanzo = false;
 		Stack<Secuencia> pilaSecuencias = new Stack<Secuencia>(); 
-		for(int i=0; i< this.latasVec.length; i++) {
+		for(i=0; i< this.latasVec.length; i++) {
 			if(latasVec[i].obtenerEtiqueta() == 'G' && esGarbanzo == false) {
 				esGarbanzo = true;
 				inicio = i;
@@ -42,7 +42,7 @@ public class Procesadora {
 			}
 		}
 		
-		int i=0;
+		i=0;
 		this.secuencia = new Secuencia[numSecuencias];
 		while(i < numSecuencias) {
 			this.secuencia[i] = new Secuencia(pilaSecuencias.pop());
